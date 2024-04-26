@@ -56,6 +56,12 @@ nav a:hover {
     color: #ffa500; 
 }
 
+.title {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-top: 20px; /* Espacio en la parte superior del título */
+    margin-bottom: 20px; /* Espacio en la parte inferior del título */
+}
+
 main {
     padding: 20px;
     display: flex;
@@ -103,6 +109,10 @@ footer {
     border-radius: 50px;
 }
 
+.google-map {
+    width: 100%; 
+}
+
 .footer-text {
     flex: 1; 
     text-align: center; 
@@ -110,6 +120,7 @@ footer {
 
 .footer-links {
     margin-left: auto; 
+    margin-right: 50px;
 }
 
 .footer-links a {
@@ -121,3 +132,58 @@ footer {
 .footer-links a:hover {
     color: #ffa500;
 }
+
+/****************************************** ESTILOS PARA EL FORMULARIO DE CONTACTO *******************************/
+
+/* Estilos para el formulario de contacto */
+.contact-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-section textarea {
+    height: 150px;
+}
+
+.contact-section button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: #0056b3;
+}
+
+
