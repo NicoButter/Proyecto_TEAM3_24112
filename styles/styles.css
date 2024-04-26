@@ -1,57 +1,102 @@
+/* Estilos generales */
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-header, footer {
-    background-color: #D83957;
+header {
+    background-color: #000;
     color: #fff;
-    text-align: center;
-    padding: 20px 0;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    margin-left: 20px;
+header h1 {
+    text-align: center; /* Centrar el texto */
+    margin: 0; /* Eliminar el margen superior e inferior predeterminado */
 }
 
-nav {
-    margin-right: 20px;
+.login-btn {
+    margin-right: 100px; /* Agregar margen derecho al botón */
+    margin-left: 100px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.logo img {
+    max-width: 120px; /* Ajusta el ancho máximo según sea necesario */
+}
+
+
+nav a {
+    color: #fff;
+    text-decoration: none; /* Eliminar el subrayado */
+    margin-left: 20px;
+    transition: color 0.3s; /* Transición suave para el cambio de color */
+}
+
+nav a:hover {
+    color: #ffa500; /* Cambiar el color al pasar el cursor sobre el enlace */
 }
 
 main {
     padding: 20px;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-@media (min-width: 768px) {
-    main {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    section {
-        flex-basis: calc(33.33% - 20px);
-    }
-}
-
-footer .footer-links {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-footer .footer-links a {
-    
-    margin-right: 20px;
+.product-card {
+    width: 25%;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
 }
 
-a {
+.product-card:hover {
+    transform: translateY(-5px); /* Desplaza la tarjeta hacia arriba en el eje Y */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #fff;
     text-decoration: none;
-    color: inherit; 
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
 }
