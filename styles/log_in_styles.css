@@ -72,3 +72,19 @@ button:hover {
 .register-link a:hover {
     text-decoration: underline;
 }
+
+.back-btn {
+    display: block;
+    text-align: center;
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+    text-decoration: none;
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Efecto de transición */
+}
+
+.back-btn:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el cursor */
+}
