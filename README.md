@@ -33,7 +33,7 @@ El proyecto está desarrollado utilizando tecnologías web modernas, incluyendo:
 - JavaScript
 - Git
 - Github
-- Githu pages
+- Github pages
 
 ## Instrucciones de Uso
 
