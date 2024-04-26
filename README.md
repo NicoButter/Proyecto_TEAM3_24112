@@ -1,7 +1,6 @@
 # Fullstack Java. Comisión 24.112. Codo a Codo 2024.
 # Team 3.
-# Proyecto de Visualización de Películas! [Cinta de Cine](https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Cinema_film.svg/1200px-Cinema_film.svg.png)
-
+# Proyecto de Visualización de Películas! 
 
 ¡Bienvenido al repositorio del Proyecto de Visualización de Películas del Grupo 3 para Codo a Codo Fullstack Java 2024!
 
