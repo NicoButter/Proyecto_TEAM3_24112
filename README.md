@@ -1,8 +1,8 @@
 # Fullstack Java. Comisión 24.112. Codo a Codo 2024.
 # Team 3.
-# Proyecto de Visualización de Películas! 
+# Tienda de Bebidas Online - Wine Shop
 
-¡Bienvenido al repositorio del Proyecto de Visualización de Películas del Grupo 3 para Codo a Codo Fullstack Java 2024!
+¡Bienvenido al repositorio de la Tienda de Bebidas Online del Grupo 3 para Codo a Codo Fullstack Java 2024!
 
 ## Descripción
 
@@ -15,13 +15,15 @@ Este proyecto forma parte del programa Codo a Codo Fullstack Java 2024 y es desa
 
 ## Descripción del Proyecto
 
-El proyecto consiste en un sitio web diseñado para la visualización de películas. Los usuarios tienen la capacidad de navegar por una selección de títulos de películas y, tras realizar el inicio de sesión en el sitio, pueden disfrutar de la experiencia completa de visualización.
+El proyecto consiste en un sitio web diseñado para la venta de bebidas online. Los usuarios tienen la capacidad de navegar por una amplia selección de bebidas, realizar compras y disfrutar de una experiencia de compra segura y conveniente.
 
 ## Funcionalidades Principales
 
-- Visualización de una amplia selección de películas.
+- Amplia selección de bebidas disponibles para la compra.
 - Sistema de inicio de sesión para acceder a las funcionalidades completas del sitio.
-- Selección y reproducción de películas disponibles.
+- Carrito de compras para agregar y gestionar productos seleccionados.
+- Proceso de pago seguro y confiable.
+- Visualización del historial de compras.
 
 ## Tecnologías Utilizadas
 
@@ -33,7 +35,7 @@ El proyecto está desarrollado utilizando tecnologías web modernas, incluyendo:
 - JavaScript
 - Git
 - Github
-- Github pages
+- Github Pages
 
 ## Instrucciones de Uso
 
