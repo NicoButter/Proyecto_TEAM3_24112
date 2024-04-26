@@ -1,4 +1,3 @@
-/* Estilos generales */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -16,12 +15,12 @@ header {
 }
 
 header h1 {
-    text-align: center; /* Centrar el texto */
-    margin: 0; /* Eliminar el margen superior e inferior predeterminado */
+    text-align: center;
+    margin: 0;
 }
 
 .login-btn {
-    margin-right: 100px; /* Agregar margen derecho al botón */
+    margin-right: 100px; 
     margin-left: 100px;
     background-color: transparent;
     border: 1px solid #fff;
@@ -42,19 +41,19 @@ header h1 {
 }
 
 .logo img {
-    max-width: 120px; /* Ajusta el ancho máximo según sea necesario */
+    max-width: 120px; 
 }
 
 
 nav a {
     color: #fff;
-    text-decoration: none; /* Eliminar el subrayado */
+    text-decoration: none; 
     margin-left: 20px;
-    transition: color 0.3s; /* Transición suave para el cambio de color */
+    transition: color 0.3s; 
 }
 
 nav a:hover {
-    color: #ffa500; /* Cambiar el color al pasar el cursor sobre el enlace */
+    color: #ffa500; 
 }
 
 main {
@@ -76,8 +75,8 @@ main {
 }
 
 .product-card:hover {
-    transform: translateY(-5px); /* Desplaza la tarjeta hacia arriba en el eje Y */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .product-card img {
@@ -89,14 +88,36 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
-    text-align: center;
+}
+
+.footer-content {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.logo img {
+    width: 100px; 
+    height: auto;
+    margin-right: 20px; 
+    border-radius: 50px;
+}
+
+.footer-text {
+    flex: 1; 
+    text-align: center; 
+}
+
+.footer-links {
+    margin-left: auto; 
 }
 
 .footer-links a {
     color: #fff;
     text-decoration: none;
+    margin-left: 20px;
 }
 
 .footer-links a:hover {
-    text-decoration: underline;
+    color: #ffa500;
 }
