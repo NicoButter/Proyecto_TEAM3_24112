@@ -3,6 +3,10 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-image: url('../img/paralax.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
 header {
