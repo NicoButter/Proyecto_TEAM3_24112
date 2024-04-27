@@ -1,74 +1,60 @@
-/* styles.css */
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: #f2f2f2; 
+    border-radius: 10px; 
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.contact-form h2 {
+    text-align: center; 
+    margin-bottom: 20px; 
 }
 
-.login-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.contact-form label {
+    display: block; 
+    margin-bottom: 10px; 
 }
 
-h2 {
-    margin-top: 0;
-    font-size: 24px;
-    text-align: center;
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
 }
 
-.group {
-    margin-bottom: 20px;
+.contact-form textarea {
+    resize: vertical; 
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
+.contact-form button {
+    width: 100%; 
+    padding: 10px; 
     background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
 }
 
-button:hover {
-    background-color: #0056b3;
+.contact-form button:hover {
+    background-color: #0056b3; 
 }
 
-.register-link {
-    text-align: center;
-}
-
-.register-link a {
-    color: #007bff;
+.back-btn {
+    display: block; 
+    margin-top: 20px; 
     text-decoration: none;
+    background-color: #007bff; 
+    color: #fff;
+    padding: 10px 20px; 
+    border-radius: 5px;
 }
 
-.register-link a:hover {
-    text-decoration: underline;
+.back-btn:hover {
+    background-color: #0056b3; 
 }
