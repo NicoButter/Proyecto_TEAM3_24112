@@ -10,7 +10,7 @@ Este proyecto forma parte del programa Codo a Codo Fullstack Java 2024 y es desa
 
 - Gisela
 - Nicolas Butterfield
-- Jony
+- Maldonado Caballero, Jonathan Hernán
 - Pedro Barbosa
 
 ## Descripción del Proyecto
