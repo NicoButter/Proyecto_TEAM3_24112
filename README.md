@@ -8,10 +8,10 @@
 
 Este proyecto forma parte del programa Codo a Codo Fullstack Java 2024 y es desarrollado por el Grupo 3, compuesto por los siguientes integrantes:
 
-- Gisela
-- Nicolas Butterfield
-- Maldonado Caballero, Jonathan Hernán
-- Pedro Barbosa
+- Gisela Montania.
+- Nicolas Butterfield.
+- Maldonado Caballero, Jonathan Hernán.
+- Pedro Barbosa.
 
 ## Descripción del Proyecto
 
