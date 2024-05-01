@@ -61,9 +61,9 @@ nav a:hover {
 }
 
 .title {
-    text-align: center; /* Centra el texto horizontalmente */
-    margin-top: 20px; /* Espacio en la parte superior del título */
-    margin-bottom: 20px; /* Espacio en la parte inferior del título */
+    text-align: center; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
 }
 
 main {
