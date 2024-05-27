@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Tienda online de bebidas espirituosas.">
+        <meta name="keywords" content="vino, wihsky, licor">
+        <meta name="author" content="Tienda Vinos">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>Tienda de vinos</title>
+        
+        <link rel="stylesheet" href="./styles/styles.css">
+    
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+        <!-- Enlaza el archivo JavaScript -->
+        <script src="./js/main.js"></script>
+    </head>
 
-    <title>Team 3 - Venta de Bebidas</title>
-    <link rel="stylesheet" href="./styles/styles.css">
-</head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="./img/wine_shop_logo.jpeg" alt="wine_shp_logo">
-        </div>
-        <h1>Wines shop tu tienda online</h1>
-        <nav>
-            <a href="#vinos">Vinos</a>
-            <a href="#cervezas">Cervezas</a>
-            <a href="#licores">Licores</a>
-            <a href="#otras-bebidas">Otras Bebidas</a>
-            <button onclick="window.location.href='./log_in.html'" class="login-btn">Login</button>
-            
-            <!-- <button class="login-btn">Login</button> -->
-        </nav>
-    </header>
+
+    <!-- El header se carga de forma externa -->
+    <header id="header" class="header"></header>
+
     <h2 class="title">Ofertas Semanales</h2>
     <main>
         <section class="product-card">
@@ -64,8 +60,8 @@
         <section class="product-card">
             <img src="./img/botella_5.webp" alt="Bebida 5">
             <h2>Whisky Johnnie Walker Swing Escoces Blended 750ml</h2>
-            <p>$99.900 en 6 cuotas de $23.701,28                
-                El precio por litro es 
+            <p>$99.900 en 6 cuotas de $23.701,28
+                El precio por litro es
                 $133.200
             </p>
             <button class="buy-btn">Comprar</button>
@@ -74,34 +70,22 @@
             <img src="./img/botella_6.webp" alt="Bebida 6">
             <h2>Whisky The Singleton 18 Años 700ml Escoces Single Malt</h2>
             <p>$145.900 en 6 cuotas de $34.614,78
-                El precio por litro es 
+                El precio por litro es
                 $208.428,57
             </p>
             <button class="buy-btn">Comprar</button>
         </section>
         <div class="google-map">
-            
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15046.243681897744!2d-122.0799685!3d37.397764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580d2e08047c5%3A0x31e7dbba21b3d5bd!2sGoogleplex!5e0!3m2!1sen!2sus!4v1631922164579!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15046.243681897744!2d-122.0799685!3d37.397764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580d2e08047c5%3A0x31e7dbba21b3d5bd!2sGoogleplex!5e0!3m2!1sen!2sus!4v1631922164579!5m2!1sen!2sus"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </main>
-    <footer>
-        <div class="footer-content">
-            <div class="logo">
-                <img src="./img/logo_team_3.png" alt="Logo del equipo">
-            </div>
-            <h3>team 3</h3>
-            <div class="footer-text">
-                <p>&copy; Team 3 - Codo a Codo - Comisión 24112 - 2024</p>
-            </div>
-            <div class="footer-links">
-                <a href="contacto.html">Contacto</a>
-            </div>
-        </div>
-    </footer>
-    
+
+     <!-- El footer se carga de forma externa -->
+     <footer id="footer"></footer>
+
 </body>
+
 </html>
-
-
-
-
