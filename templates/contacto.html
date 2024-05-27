@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="./styles/form_styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/form_styles.css">
+
+    <!-- Enlaza el archivo JavaScript -->
+    <script src="../js/main.js"></script>
 </head>
+
 <body>
+    <!-- El header se carga de forma externa -->
+    <header id="header" class="header"></header>
+
     <form class="contact-form" action="#" method="POST">
         <label for="name">Nombre:</label>
         <input type="text" id="name" name="name" class="form-input" required>
@@ -20,6 +29,8 @@
         <button type="submit" class="form-submit-btn">Enviar</button>
         <a href="./index.html" class="back-btn">Volver</a>
     </form>
-    
+    <!-- El footer se carga de forma externa -->
+    <footer id="footer"></footer>
 </body>
+
 </html>
