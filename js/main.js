@@ -1,24 +1,15 @@
 function calcularNivelDirectorio() {
     var urlActual = window.location.href;
-    console.log("La url actual es: " + urlActual);
 
     var partesURL = urlActual.split("/");
-    console.log("Las partesURL es: " + partesURL);
-
-    console.log("PartesURL.LENGTH es: " + partesURL.length);
 
     if (urlActual.startsWith("https")) {
         var nivelSubdirectorio = partesURL.length - 4;
-        console.log("La resta es: " + (partesURL.length - 4));
         //nivelSubdirectorio -= 1;
     }
     else {
         var nivelSubdirectorio = partesURL.length - 3;
-        console.log("La resta es: " + (partesURL.length - 3));
     }
-
-    console.log("las partesURL es resta: " + partesURL);
-    console.log("El nivel actual es: " + nivelSubdirectorio);
 
     // Si estás en la raíz, el prefijo es "./"
     if (nivelSubdirectorio === 1) {
@@ -30,7 +21,6 @@ function calcularNivelDirectorio() {
         return "../".repeat(nivelSubdirectorio - 1);
     }
 
-    console.log("El nivel actual es: " + nivelSubdirectorio);
 }
 
 function cargarHeaderYFooter() {
@@ -50,6 +40,7 @@ function cargarHeaderYFooter() {
             // Aca se actualizan las rutas de header
             var logoWinesShop = document.querySelector("#logo_wines_shop");
             logoWinesShop.src = relativePrefix + "img/logo_wines.webp";
+            actualizarBotonLogin();
         });
 
     // Cargar el footer
@@ -57,7 +48,33 @@ function cargarHeaderYFooter() {
         .then(response => response.text())
         .then(data => {
             document.getElementById("footer").innerHTML = data;
+
+            // Aca se actualizan las rutas de Footer
+            var logoGrupo = document.querySelector("#logo_grupo_3");
+            logoGrupo.src = relativePrefix + "img/logo_team_3.png";
         });
 }
 
 cargarHeaderYFooter();
+
+/************************************************** */
+
+// Función para verificar si la URL actual es la página de login
+function esPaginaLogin() {
+    return window.location.pathname.endsWith("log_in.html");
+}
+
+console.log("El DOM se ha cargado");
+
+function actualizarBotonLogin() {
+    var botonLogin = document.querySelector("button.login-btn");
+    if (botonLogin) {
+        if (esPaginaLogin()) {
+            botonLogin.style.display = "none";
+        } else {
+            botonLogin.style.display = "inline-block";
+        }
+    } else {
+        console.log("No se encontró el botón de login");
+    }
+}
