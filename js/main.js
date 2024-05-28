@@ -64,8 +64,6 @@ function esPaginaLogin() {
     return window.location.pathname.endsWith("log_in.html");
 }
 
-console.log("El DOM se ha cargado");
-
 function actualizarBotonLogin() {
     var botonLogin = document.querySelector("button.login-btn");
     if (botonLogin) {
