@@ -48,14 +48,16 @@ header h1 {
     max-width: 120px; 
 }
 
-nav a {
+
+
+.header a {
     color: #fff;
     text-decoration: none; 
     margin-left: 20px;
     transition: color 0.3s; 
 }
 
-nav a:hover {
+.header a:hover {
     color: #ffa500; 
 }
 
