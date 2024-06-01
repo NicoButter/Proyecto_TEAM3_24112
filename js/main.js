@@ -5,18 +5,15 @@ function calcularNivelDirectorio() {
 
     if (urlActual.startsWith("https")) {
         var nivelSubdirectorio = partesURL.length - 4;
-        //nivelSubdirectorio -= 1;
     }
     else {
         var nivelSubdirectorio = partesURL.length - 3;
     }
 
-    // Si estás en la raíz, el prefijo es "./"
     if (nivelSubdirectorio === 1) {
         return "./";
     }
 
-    // Si estás en un subdirectorio, devuelve ".." repetido según el nivel
     if (nivelSubdirectorio >= 2) {
         return "../".repeat(nivelSubdirectorio - 1);
     }
@@ -31,7 +28,6 @@ function cargarHeaderYFooter() {
     var rutaHeader = relativePrefix + "templates/header.html";
     var rutaFooter = relativePrefix + "templates/footer.html";
 
-    // Cargar el header
     fetch(rutaHeader)
         .then(response => response.text())
         .then(data => {
@@ -43,7 +39,6 @@ function cargarHeaderYFooter() {
             actualizarBotonLogin();
         });
 
-    // Cargar el footer
     fetch(rutaFooter)
         .then(response => response.text())
         .then(data => {
