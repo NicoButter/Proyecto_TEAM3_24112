@@ -25,8 +25,8 @@ function calcularNivelDirectorio() {
 
 function cargarHeaderYFooter() {
 
-    var rutaHeader = "./templates/header.html";
-    var rutaFooter = "./templates/footer.html";
+    var rutaHeader = "/templates/header.html";
+    var rutaFooter = "/templates/footer.html";
     var relativePrefix = calcularNivelDirectorio();
     var rutaHeader = relativePrefix + "templates/header.html";
     var rutaFooter = relativePrefix + "templates/footer.html";
