@@ -22,7 +22,7 @@ El proyecto consiste en un sitio web diseñado para la venta de bebidas online. 
 - Amplia selección de bebidas disponibles para la compra.
 - Sistema de inicio de sesión para acceder a las funcionalidades completas del sitio.
 - Carrito de compras para agregar y gestionar productos seleccionados.
-- Proceso de pago seguro y confiable.
+- Proceso de pago seguro y confiable.https://www.youtube.com/watch?list=PL8MLH17Fm906QPOWqsSaqP4EsbqusSw1K&v=6l-2U9usZ3E
 - Visualización del historial de compras.
 
 ## Tecnologías Utilizadas
