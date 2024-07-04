@@ -1,17 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('http://localhost:8080/proyecto_TEAM3_24112_Backend/users')
+    fetch('http://localhost:8080/proyecto_TEAM3_24112_Backend/gestionUsuarios')
         .then(response => response.json())
         .then(data => {
             const userList = document.getElementById('user-list');
-            data.forEach(user => {
+            console.log(data); // Verifica que data contenga la lista de usuarios
+
+            data.forEach(usuario => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td>${user.id}</td>
-                    <td>${user.username}</td>
-                    <td>${user.email}</td>
+                    <td>${usuario.id}</td>
+                    <td>${usuario.nombre_usuario}</td> 
+                    <td>${usuario.email}</td>
+                    <td>${usuario.fecha_nacimiento}</td>
                     <td>
-                        <button onclick="editUser(${user.id})">Editar</button>
-                        <button onclick="deleteUser(${user.id})">Eliminar</button>
+                        <button onclick="editUser(${usuario.id})">Editar</button>
+                        <button onclick="deleteUser(${usuario.id})">Eliminar</button>
                     </td>
                 `;
                 userList.appendChild(row);
@@ -21,9 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function editUser(id) {
-    // Lógica para editar usuario
+    // Implementa la lógica para editar usuario
 }
 
 function deleteUser(id) {
-    // Lógica para eliminar usuario
+    // Implementa la lógica para eliminar usuario
 }
