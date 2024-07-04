@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Usuarios</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/dashboard_styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Usuarios</h1>
+        <nav>
+            <a href="dashboard_productos.html">Gestión de Productos</a>
+            <a href="../index.html">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <button onclick="location.href='add_user.html'">Añadir Usuario</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre de Usuario</th>
+                        <th>Email</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="user-list">
+                    <!-- Aquí se llenará la lista de usuarios -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 - Proyecto TEAM3
+    </footer>
+
+    <script src="../js/user_dashboard.js"></script>
+</body>
+</html>

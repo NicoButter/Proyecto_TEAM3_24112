@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Productos</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/dashboard_styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Productos</h1>
+        <nav>
+            <a href="dashboard_usuarios.html">Gestión de Usuarios</a>
+            <a href="../index.html">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <button onclick="location.href='add_product.html'">Añadir Producto</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="product-list">
+                    <!-- Aquí se llenará la lista de productos -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 - Proyecto TEAM3
+    </footer>
+
+    <script src="../js/product_dashboard.js"></script>
+</body>
+</html>
