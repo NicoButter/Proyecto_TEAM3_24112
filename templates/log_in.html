@@ -17,7 +17,11 @@
     <main>
         <div class="login-form">
             <h2>Iniciar Sesión</h2>
-            <form action="http://localhost:8080/proyecto_TEAM3_24112_Backend/login" method="POST"> 
+            <!-- Contenedor para el mensaje de error -->
+            <div id="error-message" class="error-message" style="display: none; color: red;">
+                Nombre de usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.
+            </div>
+            <form action="http://localhost:8080/proyecto_TEAM3_24112_Backend/login" method="POST">
                 <div class="group">
                     <label for="username">Nombre de Usuario:</label>
                     <input type="text" id="username" name="username" required>
@@ -27,11 +31,28 @@
                     <input type="password" id="password" name="password" required>
                 </div>
                 <button type="submit">Iniciar Sesión</button>
-                <p class="register-link">¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a>.</p>
-                <a class="back-btn" href="../index.html">Volver</a>
+                <p class="register-link">¿No tienes una cuenta? <a href="http://127.0.0.1:5500/templates/registro.html">Regístrate aquí</a>.</p>
+                <a class="back-btn" href="http://127.0.0.1:5500/index.html">Volver</a>
             </form>
         </div>
     </main>
+
+    <script>
+        function getQueryParams() {
+            const params = {};
+            window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) {
+                params[key] = value;
+            });
+            return params;
+        }
+
+        window.onload = function() {
+            const params = getQueryParams();
+            if (params['error']) {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        };
+    </script>
 
 </body>
 
