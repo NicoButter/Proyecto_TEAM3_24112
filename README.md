@@ -55,6 +55,6 @@ Para probar el proyecto en tu máquina local, sigue estos pasos:
 
 ## Contacto
 
-Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto con nosotros a través de [correo electrónico](nicobutter@gmail.com).
+Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto conmigo a través de [correo electrónico](nicobutter@gmail.com).
 
 ¡Gracias por tu interés en nuestro proyecto!
