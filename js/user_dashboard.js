@@ -3,15 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             const userList = document.getElementById('user-list');
-            console.log(data); // Verifica que data contenga la lista de usuarios
-
+            console.log(data);
             data.forEach(usuario => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${usuario.id}</td>
-                    <td>${usuario.nombre_usuario}</td> 
+                    <td>${usuario.nombreUsuario}</td> 
                     <td>${usuario.email}</td>
-                    <td>${usuario.fecha_nacimiento}</td>
+                    <td>${usuario.fechaNacimiento}</td>
                     <td>
                         <button onclick="editUser(${usuario.id})">Editar</button>
                         <button onclick="deleteUser(${usuario.id})">Eliminar</button>
@@ -24,9 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function editUser(id) {
-    // Implementa la lógica para editar usuario
-}
-
+    
 function deleteUser(id) {
-    // Implementa la lógica para eliminar usuario
+   
 }
