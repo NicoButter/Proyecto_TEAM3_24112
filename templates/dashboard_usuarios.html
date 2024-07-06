@@ -6,6 +6,7 @@
     <title>Dashboard Usuarios</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/dashboard_styles.css">
+    <!-- <link rel="stylesheet" href="../styles/modal_styles.css"> Nuevo -->
 </head>
 <body>
     <header>
@@ -25,6 +26,7 @@
                         <th>ID</th>
                         <th>Nombre de Usuario</th>
                         <th>Email</th>
+                        <th>Fecha Nacimiento</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
@@ -35,10 +37,54 @@
         </div>
     </main>
 
+    <!-- Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Editar Usuario</h2>
+            <form id="editForm">
+
+                <input type="hidden" id="userId" name="userId">
+                
+                <label for="nombreUsuario">Nombre de Usuario:</label>
+                <input type="text" id="nombreUsuario" name="nombreUsuario" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2024 - Proyecto TEAM3</p>
     </footer>
 
     <script src="../js/user_dashboard.js"></script>
+    <script>
+        // Lógica para abrir el modal al hacer clic en Editar
+        function openModal() {
+            document.getElementById('editModal').style.display = 'block';
+        }
+
+        // Lógica para cerrar el modal
+        function closeModal() {
+            document.getElementById('editModal').style.display = 'none';
+        }
+
+        // Cerrar el modal haciendo clic en el botón de cerrar (×)
+        document.querySelector('.close').addEventListener('click', closeModal);
+
+        // Cerrar el modal haciendo clic fuera de él
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('editModal')) {
+                closeModal();
+            }
+        };
+    </script>
 </body>
 </html>
