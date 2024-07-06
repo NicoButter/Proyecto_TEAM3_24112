@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Usuarios</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/dashboard_styles.css">
-    <!-- <link rel="stylesheet" href="../styles/modal_styles.css"> Nuevo -->
+
 </head>
+
 <body>
     <header>
         <h1>Gestión de Usuarios</h1>
@@ -19,7 +22,7 @@
 
     <main>
         <div class="container">
-            <button class="add-product-btn" onclick="location.href='add_user.html'">Añadir Usuario</button>
+            <button class="add-product-btn" id="addUserBtn">Añadir Usuario</button>
             <table class="product-table">
                 <thead>
                     <tr>
@@ -31,21 +34,22 @@
                     </tr>
                 </thead>
                 <tbody id="user-list">
-                    <!-- Aquí se llenará la lista de usuarios -->
+                    
                 </tbody>
             </table>
         </div>
     </main>
 
-    <!-- Modal -->
+
+    <!-- Modal para editar usuarios -->
     <div id="editModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close" onclick="closeModal('editModal')">&times;</span>
             <h2>Editar Usuario</h2>
             <form id="editForm">
 
                 <input type="hidden" id="userId" name="userId">
-                
+
                 <label for="nombreUsuario">Nombre de Usuario:</label>
                 <input type="text" id="nombreUsuario" name="nombreUsuario" required>
 
@@ -60,31 +64,42 @@
         </div>
     </div>
 
+    <!-- Modal de añadir usuario -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addModal')">&times;</span>
+            <h2>Añadir Usuario</h2>
+            <form id="addForm">
+
+                <label for="nombreUsuarioAdd">Nombre de Usuario:</label>
+                <input type="text" id="nombreUsuarioAdd" name="nombreUsuarioAdd" required>
+
+                <label for="contraeñaAdd">Contraseña:</label>
+                <input type="password" id="passwordAdd" name="passwordAdd" required>
+
+                <label for="rolAdd">Rol:</label>
+                <select id="rolAdd" name="rolAdd" required>
+                    <option value="admin">Admin</option>
+                    <option value="cliente">Cliente</option>
+                </select>
+
+                <label for="emailAdd">Email:</label>
+                <input type="email" id="emailAdd" name="emailAdd" required>
+
+                <label for="fechaNacimientoAdd">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimientoAdd" name="fechaNacimientoAdd" required>
+
+                <button type="submit">Agregar Usuario</button>
+            </form>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2024 - Proyecto TEAM3</p>
     </footer>
 
     <script src="../js/user_dashboard.js"></script>
-    <script>
-        // Lógica para abrir el modal al hacer clic en Editar
-        function openModal() {
-            document.getElementById('editModal').style.display = 'block';
-        }
 
-        // Lógica para cerrar el modal
-        function closeModal() {
-            document.getElementById('editModal').style.display = 'none';
-        }
-
-        // Cerrar el modal haciendo clic en el botón de cerrar (×)
-        document.querySelector('.close').addEventListener('click', closeModal);
-
-        // Cerrar el modal haciendo clic fuera de él
-        window.onclick = function(event) {
-            if (event.target == document.getElementById('editModal')) {
-                closeModal();
-            }
-        };
-    </script>
 </body>
+
 </html>
