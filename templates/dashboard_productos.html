@@ -18,8 +18,8 @@
 
     <main>
         <div class="container">
-            <button onclick="location.href='add_product.html'">Añadir Producto</button>
-            <table>
+            <button class="add-product-btn" id="addProductBtn">Añadir producto</button>
+            <table class="product-table">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -29,11 +29,31 @@
                     </tr>
                 </thead>
                 <tbody id="product-list">
-                    <!-- Aquí se llenará la lista de productos -->
+                    
                 </tbody>
             </table>
         </div>
     </main>
+
+    <!-- Modal para editar productos -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('editModal')">&times;</span>
+            <h2>Editar producto</h2>
+            <form id="editForm">
+
+                <input type="hidden" id="userId" name="userId">
+
+                <label for="nombreProducto">Nombre del producto:</label>
+                <input type="text" id="nombreProducto" name="nombreProducto" required>
+
+                <label for="precio">Precio:</label>
+                <input type="tnumber" id="precio" name="precio" required>
+
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
 
     <footer>
         &copy; 2024 - Proyecto TEAM3
