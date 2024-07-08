@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/dashboard_styles.css">
 </head>
+
 <body>
     <header>
         <h1>Gestión de Productos</h1>
@@ -25,11 +27,12 @@
                         <th>ID</th>
                         <th>Nombre</th>
                         <th>Precio</th>
+                        <th>Imagen</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody id="product-list">
-                    
+
                 </tbody>
             </table>
         </div>
@@ -41,16 +44,36 @@
             <span class="close" onclick="closeModal('editModal')">&times;</span>
             <h2>Editar producto</h2>
             <form id="editForm">
-
-                <input type="hidden" id="userId" name="userId">
+                <input type="hidden" id="productId" name="productId">
 
                 <label for="nombreProducto">Nombre del producto:</label>
                 <input type="text" id="nombreProducto" name="nombreProducto" required>
 
-                <label for="precio">Precio:</label>
-                <input type="tnumber" id="precio" name="precio" required>
+                <label for="precioProducto">Precio:</label>
+                <input type="number" id="precioProducto" name="precioProducto" required>
+
+                <!-- Imagen del producto -->
+                <img id="imagenProducto" src="" alt="Imagen del Producto" style="max-width: 100%; height: auto;">
 
                 <button type="submit">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Modal para añadir productos -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addModal')">&times;</span>
+            <h2>Añadir producto</h2>
+            <form id="addForm">
+                <label for="nuevoNombreProducto">Nombre del producto:</label>
+                <input type="text" id="nuevoNombreProducto" name="nuevoNombreProducto" required>
+
+                <label for="nuevoPrecioProducto">Precio:</label>
+                <input type="number" id="nuevoPrecioProducto" name="nuevoPrecioProducto" required>
+
+                <button type="submit">Añadir Producto</button>
             </form>
         </div>
     </div>
@@ -61,4 +84,5 @@
 
     <script src="../js/product_dashboard.js"></script>
 </body>
+
 </html>

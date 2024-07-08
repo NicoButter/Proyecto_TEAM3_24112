@@ -99,25 +99,66 @@ main {
     justify-content: space-around;
 }
 
-.product-card {
-    width: 25%;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
+/* /* Estilos para el contenedor de la lista de productos */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
 }
 
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+/* Estilos para las tarjetas de productos */
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    width: 200px;
+    text-align: center;
+    padding: 15px;
 }
 
 .product-card img {
     width: 100%;
-    border-radius: 5px;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
 }
+
+.product-card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-card p {
+    color: #888;
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.buy-btn {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #0056b3;
+}
+
+.product-card:hover {
+    transf */
 
 footer {
     background-color: #000;
