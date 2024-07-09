@@ -33,6 +33,7 @@ El proyecto está desarrollado utilizando tecnologías web modernas, incluyendo:
 - Git
 - Github
 - Github Pages
+- OpneSUSE Linux
 
 ## Instrucciones de Uso
 
