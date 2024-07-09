@@ -126,14 +126,14 @@ addForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const nombreUsuario = document.getElementById('nombreUsuarioAdd').value;
-    const contraseña = document.getElementById('passwordAdd').value; 
+    const contrasena = document.getElementById('passwordAdd').value; 
     const rol = document.getElementById('rolAdd').value; 
     const email = document.getElementById('emailAdd').value;
     const fechaNacimiento = document.getElementById('fechaNacimientoAdd').value;
 
     const nuevoUsuario = {
         nombreUsuario: nombreUsuario,
-        contraseña: contraseña,
+        contrasena: contrasena,
         rol: rol,
         email: email,
         fechaNacimiento: fechaNacimiento
@@ -150,6 +150,7 @@ addForm.addEventListener('submit', function(event) {
     .then(data => {
         console.log('Respuesta del servidor al agregar usuario:', data);
         closeModal('addModal');
+        location.reload(); // Actualiza la página
     })
     .catch(error => console.error('Error al agregar usuario:', error));
 });
@@ -157,3 +158,4 @@ addForm.addEventListener('submit', function(event) {
 document.getElementById('addUserBtn').addEventListener('click', function() {
     openModal('addModal');
 });
+

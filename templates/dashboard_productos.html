@@ -26,7 +26,9 @@
                     <tr>
                         <th>ID</th>
                         <th>Nombre</th>
+                        <th>Tipo</th>
                         <th>Precio</th>
+                        <th>Descripción</th>
                         <th>Imagen</th>
                         <th>Acciones</th>
                     </tr>
@@ -38,23 +40,26 @@
         </div>
     </main>
 
-    <!-- Modal para editar productos -->
+    <!-- Modal de editar producto -->
     <div id="editModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('editModal')">&times;</span>
-            <h2>Editar producto</h2>
+            <h2>Editar Producto</h2>
             <form id="editForm">
-                <input type="hidden" id="productId" name="productId">
-
-                <label for="nombreProducto">Nombre del producto:</label>
-                <input type="text" id="nombreProducto" name="nombreProducto" required>
-
+                <input type="hidden" id="productId">
+                <label for="nombreProducto">Nombre:</label>
+                <input type="text" id="nombreProducto" required><br>
+                <label for="tipoProducto">Tipo:</label>
+                <input type="text" id="tipoProducto" required><br>
                 <label for="precioProducto">Precio:</label>
-                <input type="number" id="precioProducto" name="precioProducto" required>
-
-                <!-- Imagen del producto -->
-                <img id="imagenProducto" src="" alt="Imagen del Producto" style="max-width: 100%; height: auto;">
-
+                <input type="number" id="precioProducto" step="0.01" required><br>
+                <label for="descripcionProducto">Descripción:</label>
+                <textarea id="descripcionProducto" required></textarea><br>
+                <label for="imagenProducto">Imagen Actual:</label><br>
+                <img id="imagenProducto" src="../img/no-image.png" alt="Imagen del Producto"
+                    style="max-width: 100px; height: auto;"><br>
+                <label for="nuevaImagenProducto">Subir Nueva Imagen:</label>
+                <input type="file" id="nuevaImagenProducto"><br>
                 <button type="submit">Guardar Cambios</button>
             </form>
         </div>
@@ -69,10 +74,19 @@
             <form id="addForm">
                 <label for="nuevoNombreProducto">Nombre del producto:</label>
                 <input type="text" id="nuevoNombreProducto" name="nuevoNombreProducto" required>
-
+            
+                <label for="nuevoTipoProducto">Tipo:</label>
+                <input type="text" id="nuevoTipoProducto" name="nuevoTipoProducto" required>
+            
                 <label for="nuevoPrecioProducto">Precio:</label>
                 <input type="number" id="nuevoPrecioProducto" name="nuevoPrecioProducto" required>
-
+            
+                <label for="nuevaDescripcionProducto">Descripción:</label>
+                <textarea id="nuevaDescripcionProducto" name="nuevaDescripcionProducto" required></textarea>
+                
+                <label for="nuevaImagenProducto">Imagen:</label>
+                <input type="file" id="nuevaImagenProducto" name="nuevaImagenProducto" required>
+            
                 <button type="submit">Añadir Producto</button>
             </form>
         </div>

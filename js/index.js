@@ -2,14 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('http://localhost:8080/proyecto_TEAM3_24112_Backend/gestionProductos')
         .then(response => response.json())
         .then(data => {
-            const productList = document.querySelector('.product-list');
+            const productList = document.getElementById('product-list');
             productList.innerHTML = ''; // Limpiamos la lista antes de añadir productos nuevos
             data.forEach(product => {
                 const productCard = document.createElement('section');
                 productCard.className = 'product-card';
                 productCard.innerHTML = `
                     <img src="${obtenerImagenProducto(product)}" alt="Imagen del Producto">
-                    <h2>${product.nombre}</h2>.
+                    <h2>${product.nombre}</h2>
                     <p>${product.tipo}</p>
                     <p>${product.precio}</p>
                     <p>${product.descripcion}</p>
@@ -22,11 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function obtenerImagenProducto(producto) {
-    if (producto.imagen_nombre) {
-        // Si hay una referencia a la imagen en el producto, la mostramos
-        return '../img/' + producto.imagen_nombre; // Asegúrate de que la ruta sea correcta según la estructura de tu proyecto
+    if (producto.imagenNombre) {
+        return `http://localhost:8080/proyecto_TEAM3_24112_Backend/imagenes/${encodeURIComponent(producto.imagenNombre)}`;
     } else {
-        // Si no hay imagen en el producto, mostramos la imagen por defecto desde el frontend
-        return '../img/no-image.png'; // Ajusta la ruta según la ubicación real de tu imagen por defecto
+        return '../img/no-image.png'; // Aquí se muestra la imagen genérica si no hay imagenNombre
     }
 }
