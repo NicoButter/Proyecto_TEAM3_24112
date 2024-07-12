@@ -100,28 +100,6 @@ main {
     justify-content: space-around;
 }
 
-/* .product-card {
-    width: 25%;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-.product-card img {
-    width: 100%;
-    border-radius: 5px;
-} */
-
-
-/* Estilos para el contenedor de la lista de productos */
 .product-list {
     display: flex;
     flex-wrap: wrap;
@@ -130,7 +108,7 @@ main {
     padding: 20px;
 }
 
-/* Estilos para las tarjetas de productos */
+
 .product-card {
     background-color: #fff;
     border-radius: 8px;

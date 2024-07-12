@@ -67,7 +67,7 @@ function deleteUser(id) {
     }
 }
 
-// Evento de envío del formulario de edición de usuario
+
 const editForm = document.getElementById('editForm');
 
 editForm.addEventListener('submit', function (event) {
@@ -150,7 +150,7 @@ addForm.addEventListener('submit', function(event) {
     .then(data => {
         console.log('Respuesta del servidor al agregar usuario:', data);
         closeModal('addModal');
-        location.reload(); // Actualiza la página
+        location.reload(); 
     })
     .catch(error => console.error('Error al agregar usuario:', error));
 });

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             const productList = document.getElementById('product-list');
-            productList.innerHTML = ''; // Limpiamos la lista antes de añadir productos nuevos
+            productList.innerHTML = ''; // Limpio la lista antes de añadir productos nuevos
             data.forEach(product => {
                 const imageUrl = obtenerImagenProducto(product);
                 console.log(`Producto ID: ${product.id}, Nombre Imagen: ${product.imagenNombre}, URL Imagen: ${imageUrl}`);
@@ -59,12 +59,12 @@ function editProduct(id) {
                 openModal('editModal');
             } else {
                 console.error('Producto no encontrado con ID:', id);
-                // Manejar el caso donde no se encuentra el producto (por ejemplo, mostrar un mensaje de error)
+                
             }
         })
         .catch(error => {
             console.error(`Error al obtener el producto con ID ${id}:`, error);
-            // Implementar manejo de errores adicional (por ejemplo, mostrar un mensaje de error en el modal)
+            
         });
 }
 
@@ -157,7 +157,7 @@ document.getElementById('addProductBtn').addEventListener('click', function() {
 });
 
 document.getElementById('addForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que se envíe el formulario automáticamente
+    event.preventDefault(); 
 
     const nuevoNombreProducto = document.getElementById('nuevoNombreProducto').value;
     const nuevoTipoProducto = document.getElementById('nuevoTipoProducto').value;
@@ -181,8 +181,8 @@ document.getElementById('addForm').addEventListener('submit', function(event) {
     .then(response => response.json())
     .then(data => {
         console.log('Producto añadido exitosamente:', data);
-        closeModal('addModal'); // Cerrar el modal después de añadir el producto
-        reloadProductList(); // Recargar la lista de productos
+        closeModal('addModal'); 
+        reloadProductList(); 
     })
     .catch(error => console.error('Error al añadir producto:', error));
 });
@@ -193,7 +193,7 @@ function reloadProductList() {
         .then(response => response.json())
         .then(data => {
             const productList = document.getElementById('product-list');
-            productList.innerHTML = ''; // Limpiar la lista de productos antes de añadir nuevos elementos
+            productList.innerHTML = ''; 
             data.forEach(product => {
                 const row = document.createElement('tr');
                 row.innerHTML = `

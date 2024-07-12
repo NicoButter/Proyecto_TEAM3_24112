@@ -152,11 +152,8 @@ footer {
     background-image: url('../img/productos_administration.png');
 }
 
-
 /* ************************************************************************************************ */
 
-
-/* Estilos generales de modales */
 .modal {
     display: none;
     position: fixed;
