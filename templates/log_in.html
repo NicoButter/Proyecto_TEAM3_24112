@@ -7,7 +7,7 @@
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/log_in_styles.css">
-    <script src="../js/main.js"></script>
+    
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     <main>
         <div class="login-form">
             <h2>Iniciar Sesión</h2>
-            <!-- Contenedor para el mensaje de error -->
+          
             <div id="error-message" class="error-message" style="display: none; color: red;">
                 Nombre de usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.
             </div>
@@ -31,29 +31,12 @@
                     <input type="password" id="password" name="password" required>
                 </div>
                 <button type="submit">Iniciar Sesión</button>
-                <p class="register-link">¿No tienes una cuenta? <a href="http://127.0.0.1:5500/templates/registro.html">Regístrate aquí</a>.</p>
-                <a class="back-btn" href="http://127.0.0.1:5500/index.html">Volver</a>
+                <p class="register-link">¿No tienes una cuenta? <a href="http://127.0.0.1/wines/templates/registro.html">Regístrate aquí</a>.</p>
+                <a class="back-btn" href="http://127.0.0.1/wines/index.html">Volver</a>
             </form>
         </div>
     </main>
-
-    <script>
-        function getQueryParams() {
-            const params = {};
-            window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) {
-                params[key] = value;
-            });
-            return params;
-        }
-
-        window.onload = function() {
-            const params = getQueryParams();
-            if (params['error']) {
-                document.getElementById('error-message').style.display = 'block';
-            }
-        };
-    </script>
-
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

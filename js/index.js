@@ -16,6 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button class="buy-btn">Comprar</button>
                 `;
                 productList.appendChild(productCard);
+
+                // Agregar evento click al botón "Comprar"
+                const buyButton = productCard.querySelector('.buy-btn');
+                buyButton.addEventListener('click', () => {
+                    window.location.href = './templates/log_in.html'; // Redirigir a la página de login
+                });
             });
         })
         .catch(error => console.error('Error al obtener productos:', error));

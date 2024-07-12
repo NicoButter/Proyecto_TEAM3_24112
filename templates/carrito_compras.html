@@ -1,22 +1,202 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Carrito de Compras</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/carrito_styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
+
 <body>
     <header>
         <h1>Carrito de Compras</h1>
+        <p id="bienvenida"></p>
+        <h2 class="titulo-ofertas">Ofertas Actuales</h2>
         <nav>
-            <a href="../index.html">Cerrar Sesión</a>
+            <a href="#" id="inicioLink">Inicio</a>
+            <a href="#" id="cervezasLink">Cervezas</a>
+            <a href="#" id="vinosLink">Vinos</a>
+            <a href="#" id="bebidasBlancasLink">Bebidas blancas</a>
+            <a href="#" id="licoresLink">Licores</a>
+            <select id="tipoBebida">
+                <option value="Cerveza">Cerveza</option>
+                <option value="Vinos">Vinos</option>
+                <option value="Whisky">Bebidas blancas</option>
+                <option value="Licores">Licores</option>
+            </select>
+            <a href="#">
+                <span class="carrito-icon" id="carritoIcono">
+                    <i class="fas fa-shopping-cart"></i>
+                </span>
+            </a>
+            <a href="../index.html" class="cerrar-sesion">Cerrar Sesión</a>
         </nav>
     </header>
+
     <main>
-        <!-- Contenido del carrito de compras -->
+        <section class="producto-container" id="productos">
+            <!-- Aquí se mostrarán dinámicamente los productos según el tipo de bebida seleccionado -->
+        </section>
+        <section class="container oferta-container" id="ofertasSemana">
+            <!-- Aquí se mostrarán dinámicamente los productos según el tipo de bebida seleccionado -->
+        </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Proyecto TEAM3</p>
     </footer>
+
+    <script src="../js/carrito_de_compras.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Obtener los elementos de los enlaces del header
+            const inicioLink = document.getElementById('inicioLink');
+            const cervezasLink = document.getElementById('cervezasLink');
+            const vinosLink = document.getElementById('vinosLink');
+            const bebidasBlancasLink = document.getElementById('bebidasBlancasLink');
+            const licoresLink = document.getElementById('licoresLink');
+            const tipoBebidaSelect = document.getElementById('tipoBebida');
+
+            // Función para cargar productos por tipo
+            function cargarProductosPorTipo(tipo) {
+                fetch(`http://localhost:8080/proyecto_TEAM3_24112_Backend/productosPorTipo?tipo=${encodeURIComponent(tipo)}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Respuesta de red incorrecta');
+                        }
+                        return response.json();
+                    })
+                    .then(productos => {
+                        console.log(`Productos recibidos para tipo ${tipo}:`, productos); // Depura los datos recibidos
+
+                        const productosSection = document.getElementById('productos');
+                        productosSection.innerHTML = '';
+
+                        productos.forEach(producto => {
+                            const productoContainer = document.createElement('div');
+                            productoContainer.classList.add('producto-container');
+
+                            const nombreProducto = document.createElement('h2');
+                            nombreProducto.textContent = producto.nombre;
+                            productoContainer.appendChild(nombreProducto);
+
+                            const imagenProducto = document.createElement('img');
+                            imagenProducto.src = `http://localhost:8080/proyecto_TEAM3_24112_Backend/imagenes/${producto.imagen}`;
+                            imagenProducto.alt = producto.nombre;
+                            productoContainer.appendChild(imagenProducto);
+
+                            const descripcionProducto = document.createElement('p');
+                            descripcionProducto.textContent = producto.descripcion || 'Descripción no disponible';
+                            productoContainer.appendChild(descripcionProducto);
+
+                            const precioProducto = document.createElement('p');
+                            precioProducto.textContent = `Precio: $${producto.precio}`;
+                            productoContainer.appendChild(precioProducto);
+
+                            const botonComprar = document.createElement('button');
+                            botonComprar.textContent = 'Comprar';
+                            botonComprar.addEventListener('click', () => {
+                                console.log('Agregar al carrito:', producto);
+                            });
+                            productoContainer.appendChild(botonComprar);
+
+                            productosSection.appendChild(productoContainer);
+                        });
+                    })
+                    .catch(error => {
+                        console.error(`Error al cargar productos por tipo ${tipo}:`, error);
+                    });
+            }
+
+            // Event listeners para los enlaces del header
+            inicioLink.addEventListener('click', (event) => {
+                event.preventDefault();
+                cargarProductosPorTipo('Inicio'); // Ajusta el tipo según tu implementación
+            });
+
+            cervezasLink.addEventListener('click', (event) => {
+                event.preventDefault();
+                cargarProductosPorTipo('Cervezas'); // Ajusta el tipo según tu implementación
+            });
+
+            vinosLink.addEventListener('click', (event) => {
+                event.preventDefault();
+                cargarProductosPorTipo('Vinos'); // Ajusta el tipo según tu implementación
+            });
+
+            bebidasBlancasLink.addEventListener('click', (event) => {
+                event.preventDefault();
+                cargarProductosPorTipo('Bebidas blancas'); // Ajusta el tipo según tu implementación
+            });
+
+            licoresLink.addEventListener('click', (event) => {
+                event.preventDefault();
+                cargarProductosPorTipo('Licores'); // Ajusta el tipo según tu implementación
+            });
+
+            // Event listener para el cambio de opción en el select
+            tipoBebidaSelect.addEventListener('change', () => {
+                const tipoSeleccionado = tipoBebidaSelect.value;
+                cargarProductosPorTipo(tipoSeleccionado); // Llama a la función con el tipo seleccionado
+            });
+        });
+    </script>
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito de Compras</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/carrito_styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Carrito de Compras</h1>
+        <p id="bienvenida"></p>
+        <h2 class="titulo-ofertas">Ofertas Actuales</h2>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Licores</a>
+            <a href="#">Vinos</a>
+            <a href="#">Whisky</a>
+            <a href="#">Cervezas</a>
+            <a href="#">
+                <span class="carrito-icon" id="carritoIcono">
+                    <i class="fas fa-shopping-cart"></i>
+                </span>
+            </a>
+            <a href="../index.html" class="cerrar-sesion">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="ofertasSemana">
+            <!-- Aquí se agregarán dinámicamente las ofertas de la semana
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Proyecto TEAM3</p>
+    </footer>
+
+    <script src="../js/carrito_de_compras.js"></script>
+</body>
+
+</html> -->
