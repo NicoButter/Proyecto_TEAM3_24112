@@ -51,7 +51,7 @@
     <script src="../js/carrito_de_compras.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Obtener los elementos de los enlaces del header
+            
             const inicioLink = document.getElementById('inicioLink');
             const cervezasLink = document.getElementById('cervezasLink');
             const vinosLink = document.getElementById('vinosLink');
@@ -59,7 +59,7 @@
             const licoresLink = document.getElementById('licoresLink');
             const tipoBebidaSelect = document.getElementById('tipoBebida');
 
-            // Función para cargar productos por tipo
+            
             function cargarProductosPorTipo(tipo) {
                 fetch(`http://localhost:8080/proyecto_TEAM3_24112_Backend/productosPorTipo?tipo=${encodeURIComponent(tipo)}`)
                     .then(response => {
@@ -110,7 +110,6 @@
                     });
             }
 
-            // Event listeners para los enlaces del header
             inicioLink.addEventListener('click', (event) => {
                 event.preventDefault();
                 cargarProductosPorTipo('Inicio'); // Ajusta el tipo según tu implementación
@@ -136,7 +135,7 @@
                 cargarProductosPorTipo('Licores'); // Ajusta el tipo según tu implementación
             });
 
-            // Event listener para el cambio de opción en el select
+           
             tipoBebidaSelect.addEventListener('change', () => {
                 const tipoSeleccionado = tipoBebidaSelect.value;
                 cargarProductosPorTipo(tipoSeleccionado); // Llama a la función con el tipo seleccionado
